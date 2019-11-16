@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Services\GoogleNeuralService;
+use App\Services\GoogleSpeechKitService;
+use App\Services\Impl\GoogleNeuralServiceImpl;
+use App\Services\Impl\GoogleSpeechKitServiceImpl;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->bind(GoogleSpeechKitService::class, GoogleSpeechKitServiceImpl::class);
+        $this->app->bind(GoogleNeuralService::class, GoogleNeuralServiceImpl::class);
     }
 }
