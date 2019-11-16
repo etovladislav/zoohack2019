@@ -14,7 +14,7 @@ final class GoogleNeuralServiceImpl implements GoogleNeuralService
     public function analyseText(string $text): GoogleNeuralAnalyseTextResponse
     {
         $client     = new LanguageClient();
-        $annotation = $client->analyzeSentiment($text);
+        $annotation = $client->classifyText($text);
         dd($annotation);
     }
 }

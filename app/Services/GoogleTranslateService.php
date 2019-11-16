@@ -7,4 +7,5 @@ namespace App\Services;
 interface GoogleTranslateService
 {
 
+    public function translate(string $text, string $language): string;
 }
