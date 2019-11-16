@@ -19,7 +19,6 @@ final class GoogleTranslateServiceImpl implements GoogleTranslateService
                 'target' => 'en',
             ]
         );
-        dd($res);
-
+        return $res['text'];
     }
 }

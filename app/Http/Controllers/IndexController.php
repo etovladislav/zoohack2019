@@ -4,22 +4,18 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Services\GoogleNeuralService;
-use App\Services\GoogleSpeechKitService;
-use App\Services\GoogleTranslateService;
+use App\Services\VoiceRequestResolver;
+use Illuminate\Http\Request;
+use Psr\Log\LoggerInterface;
 
 final class IndexController extends Controller
 {
 
-    public function index(
-        GoogleSpeechKitService $googleSpeechKitService,
-        GoogleNeuralService $googleNeuralService,
-        GoogleTranslateService $googleTranslateService
-    ) {
-        //        $text = $googleSpeechKitService->speechToText('test.flac', null)->getTranscription();
-        //        $googleNeuralService->analyseText(
-        //            'Hello in the forest fire fire. I need a help. We are in dangerous situation. Hello in the forest fire fire. I need a help. We are in dangerous situation'
-        //        );
-        $googleTranslateService->translate('Привет я михон', 'ru');
+    public function vox(
+        Request $request,
+        VoiceRequestResolver $requestResolver,
+        LoggerInterface $logger
+    ): void {
+        $requestResolver->execute($request->get('phone'), $request->get('media'));
     }
 }
