@@ -52,7 +52,7 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
             $phone,
             'Moscow',
             $text->getTranscription(),
-            $text->getConfidence(),
+            $text->getConfidence() * 100,
             $categories,
             $filePath
         );

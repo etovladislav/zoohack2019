@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 final class RequestModel extends Model
 {
     protected $table = 'requests';
+    protected $fillable = ['*'];
     protected $casts = [
-        'categories' => 'array'
+        'categories' => 'array',
     ];
 }

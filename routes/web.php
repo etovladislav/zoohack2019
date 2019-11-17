@@ -14,3 +14,4 @@
 Route::get('/', 'IndexController@index');
 Route::get('/voximplant', 'IndexController@vox');
 Route::get('/requests', 'RequestsController@findAll');
+Route::post('/answer', 'SmsController@sendSms');
