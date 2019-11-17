@@ -33,6 +33,6 @@ final class RequestRepositoryImpl implements RequestsRepository
 
     public function findAll(): Collection
     {
-        return RequestModel::all();
+        return RequestModel::query()->orderBy('created_at', 'DESC')->get();
     }
 }
