@@ -65,7 +65,7 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
         $internalCategories = $this->textCategoryDetector->execute($enText);
         $textLocation       = $analysedText->getEntites();
         foreach ($internalCategories as $item) {
-            $categories[] = ['name' => $item, 'confidence' => 0.8];
+            $categories['categories'][] = ['name' => $item, 'confidence' => 0.8];
         }
         $this->repository->save(
             $phone,
