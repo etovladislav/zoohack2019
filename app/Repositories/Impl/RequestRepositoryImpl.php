@@ -17,7 +17,8 @@ final class RequestRepositoryImpl implements RequestsRepository
         string $text,
         float $textConfidence,
         array $categories,
-        string $voice
+        string $voice,
+        string $textLocation
     ): void {
         $model                  = new RequestModel();
         $model->phone           = $phone;
@@ -26,6 +27,7 @@ final class RequestRepositoryImpl implements RequestsRepository
         $model->text_confidence = $textConfidence;
         $model->categories      = $categories;
         $model->voice           = $voice;
+        $model->text_location   = $textLocation;
         $model->save();
     }
 

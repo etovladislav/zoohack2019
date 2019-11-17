@@ -8,7 +8,6 @@ use App\Services\GoogleNeuralService;
 use App\Services\Responses\GoogleNeuralAnalyseTextResponse;
 use Google\Cloud\Language\Annotation;
 use Google\Cloud\Language\LanguageClient;
-use Illuminate\Support\Facades\Log;
 
 final class GoogleNeuralServiceImpl implements GoogleNeuralService
 {
@@ -18,13 +17,16 @@ final class GoogleNeuralServiceImpl implements GoogleNeuralService
         $client = new LanguageClient();
         /** @var Annotation $annotations */
         $annotation = $client->classifyText($text . '. ' . $text);
-        Log::info(
-            'Test',
-            [
-                'text' => $text,
-                'resp' => $annotation->categories(),
-            ]
-        );
-        return new GoogleNeuralAnalyseTextResponse($annotation->info());
+        $entities   = $client->analyzeEntities($text);
+        $enRes      = null;
+        if (!empty($entities->entitiesByType('ADDRESS'))) {
+            $enRes = $entities->entitiesByType('ADDRESS')[0]['name'];
+        } else {
+            $enRes = '';
+            foreach ($entities->entitiesByType('LOCATION') as $re) {
+                $enRes .= ', ' . $re['name'];
+            }
+        }
+        return new GoogleNeuralAnalyseTextResponse($annotation->info(), $enRes);
     }
 }

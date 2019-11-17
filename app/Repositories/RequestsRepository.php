@@ -15,7 +15,8 @@ interface RequestsRepository
         string $text,
         float $textConfidence,
         array $categories,
-        string $voice
+        string $voice,
+        string $textLocation
     ): void;
 
     public function findAll() : Collection;

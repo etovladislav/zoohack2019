@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 
 final class SmsController extends Controller
 {
-
     public function sendSms(
         Request $request,
         SmsApiService $apiService
