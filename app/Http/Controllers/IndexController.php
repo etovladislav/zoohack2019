@@ -16,7 +16,7 @@ final class IndexController extends Controller
         RegionByPhoneNumberDetector $detector,
         GoogleNeuralService $googleNeuralService
     ) {
-
+        return view('index');
     }
 
     public function vox(
