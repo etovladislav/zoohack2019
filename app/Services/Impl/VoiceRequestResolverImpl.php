@@ -9,6 +9,7 @@ use App\Repositories\RequestsRepository;
 use App\Services\GoogleNeuralService;
 use App\Services\GoogleSpeechKitService;
 use App\Services\GoogleTranslateService;
+use App\Services\RegionByPhoneNumberDetector;
 use App\Services\VoiceRequestResolver;
 
 final class VoiceRequestResolverImpl implements VoiceRequestResolver
@@ -21,25 +22,30 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
     private $textAnalyser;
     /** @var RequestsRepository */
     private $repository;
+    /** @var RegionByPhoneNumberDetector */
+    private $regionDetector;
 
     /**
      * VoiceRequestResolverImpl constructor.
      *
-     * @param GoogleTranslateService $translator
-     * @param GoogleSpeechKitService $speechToText
-     * @param GoogleNeuralService    $textAnalyser
-     * @param RequestsRepository     $repository
+     * @param GoogleTranslateService      $translator
+     * @param GoogleSpeechKitService      $speechToText
+     * @param GoogleNeuralService         $textAnalyser
+     * @param RequestsRepository          $repository
+     * @param RegionByPhoneNumberDetector $regionDetector
      */
     public function __construct(
         GoogleTranslateService $translator,
         GoogleSpeechKitService $speechToText,
         GoogleNeuralService $textAnalyser,
-        RequestsRepository $repository
+        RequestsRepository $repository,
+        RegionByPhoneNumberDetector $regionDetector
     ) {
-        $this->translator   = $translator;
-        $this->speechToText = $speechToText;
-        $this->textAnalyser = $textAnalyser;
-        $this->repository   = $repository;
+        $this->translator     = $translator;
+        $this->speechToText   = $speechToText;
+        $this->textAnalyser   = $textAnalyser;
+        $this->repository     = $repository;
+        $this->regionDetector = $regionDetector;
     }
 
     public function execute(string $phone, string $requestAudioRecord): void
@@ -48,9 +54,10 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
         $text       = $this->speechToText->speechToText(storage_path('app/public') . '/' . $filePath, null);
         $enText     = $this->translator->translate($text->getTranscription(), 'en');
         $categories = $this->textAnalyser->analyseText($enText)->getCategories();
+        $region     = $this->regionDetector->execute($phone);
         $this->repository->save(
             $phone,
-            'Moscow',
+            $region['country_name'] . ', ' . $region['location'],
             $text->getTranscription(),
             $text->getConfidence() * 100,
             $categories,

@@ -4,12 +4,19 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Services\RegionByPhoneNumberDetector;
 use App\Services\VoiceRequestResolver;
 use Illuminate\Http\Request;
 use Psr\Log\LoggerInterface;
 
 final class IndexController extends Controller
 {
+    public function index(
+        RegionByPhoneNumberDetector $detector
+    )
+    {
+        dd($detector->execute('79656020089'));
+    }
     public function vox(
         Request $request,
         VoiceRequestResolver $requestResolver,
