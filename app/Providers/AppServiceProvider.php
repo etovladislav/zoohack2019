@@ -10,8 +10,10 @@ use App\Services\GoogleTranslateService;
 use App\Services\Impl\GoogleNeuralServiceImpl;
 use App\Services\Impl\GoogleSpeechKitServiceImpl;
 use App\Services\Impl\GoogleTranslateServiceImpl;
+use App\Services\Impl\RegionByPhoneNumberDetectorImpl;
 use App\Services\Impl\SmscApiServiceImpl;
 use App\Services\Impl\VoiceRequestResolverImpl;
+use App\Services\RegionByPhoneNumberDetector;
 use App\Services\SmsApiService;
 use App\Services\VoiceRequestResolver;
 use Illuminate\Support\ServiceProvider;
@@ -41,5 +43,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(SmsApiService::class, SmscApiServiceImpl::class);
         $this->app->bind(VoiceRequestResolver::class, VoiceRequestResolverImpl::class);
         $this->app->bind(RequestsRepository::class, RequestRepositoryImpl::class);
+        $this->app->bind(RegionByPhoneNumberDetector::class, RegionByPhoneNumberDetectorImpl::class);
     }
 }

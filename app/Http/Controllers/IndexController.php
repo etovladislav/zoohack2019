@@ -10,7 +10,6 @@ use Psr\Log\LoggerInterface;
 
 final class IndexController extends Controller
 {
-
     public function vox(
         Request $request,
         VoiceRequestResolver $requestResolver,
