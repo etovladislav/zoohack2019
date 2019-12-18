@@ -14,6 +14,7 @@
         "google/cloud": "^0.118.0",
         "google/cloud-speech": "^0.27.0",
         "laravel/framework": "^6.2",
+        "laravel/passport": "^8.0",
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
