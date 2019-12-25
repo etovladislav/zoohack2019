@@ -23,4 +23,4 @@ Route::middleware('auth:api')->group(
     }
 );
 
-Route::get('/*', 'IndexController@index');
+Route::get('/{any}', 'IndexController@index')->where('any', '.*');
