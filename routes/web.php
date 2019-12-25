@@ -14,7 +14,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'IndexController@index');
+Route::get('/front/*', 'IndexController@index');
 
 Route::middleware('auth:api')->group(
     static function () {
