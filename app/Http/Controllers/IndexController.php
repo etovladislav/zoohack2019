@@ -24,6 +24,6 @@ final class IndexController extends Controller
         VoiceRequestResolver $requestResolver,
         LoggerInterface $logger
     ): void {
-        $requestResolver->execute($request->get('phone'), $request->file('audio'));
+        $requestResolver->execute('+79046660000', $request->file('audio'));
     }
 }
