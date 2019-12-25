@@ -14,8 +14,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'IndexController@index');
-
 Route::middleware('auth:api')->group(
     static function () {
         Route::get('/voximplant', 'IndexController@vox');
@@ -24,3 +22,5 @@ Route::middleware('auth:api')->group(
         Route::post('/answer', 'SmsController@sendSms');
     }
 );
+
+Route::get('/{any}', 'IndexController@index')->where('any', '.*');
