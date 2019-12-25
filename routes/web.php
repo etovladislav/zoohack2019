@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->group(
     static function () {
-        Route::get('/voximplant', 'IndexController@vox');
         Route::get('/requests', 'RequestsController@findAll');
         Route::get('/requests/{id}', 'RequestsController@findById');
         Route::post('/answer', 'SmsController@sendSms');
     }
 );
 
+Route::get('/audio', 'IndexController@audio');
 Route::get('/{any}', 'IndexController@index')->where('any', '.*');

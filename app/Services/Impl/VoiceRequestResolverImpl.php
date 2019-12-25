@@ -12,6 +12,7 @@ use App\Services\GoogleTranslateService;
 use App\Services\RegionByPhoneNumberDetector;
 use App\Services\TextCategoryDetector;
 use App\Services\VoiceRequestResolver;
+use Illuminate\Http\UploadedFile;
 
 final class VoiceRequestResolverImpl implements VoiceRequestResolver
 {
@@ -54,7 +55,7 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
         $this->textCategoryDetector = $textCategoryDetector;
     }
 
-    public function execute(string $phone, string $requestAudioRecord): void
+    public function execute(string $phone, UploadedFile $requestAudioRecord): void
     {
         $filePath           = FileUtil::saveFromUrl($requestAudioRecord);
         $text               = $this->speechToText->speechToText(storage_path('app/public') . '/' . $filePath, null);

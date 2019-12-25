@@ -19,11 +19,11 @@ final class IndexController extends Controller
         return view('index');
     }
 
-    public function vox(
+    public function audio(
         Request $request,
         VoiceRequestResolver $requestResolver,
         LoggerInterface $logger
     ): void {
-        $requestResolver->execute($request->get('phone'), $request->get('media'));
+        $requestResolver->execute($request->get('phone'), $request->file('audio'));
     }
 }
