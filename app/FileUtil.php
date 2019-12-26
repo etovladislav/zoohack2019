@@ -14,7 +14,7 @@ final class FileUtil
     public static function saveFromUrl(UploadedFile $file): string
     {
         $fileName = Uuid::uuid4()->toString() . '.flac';
-        Storage::disk('public')->put($fileName, $file);
+        $file->storePubliclyAs('/public', $fileName);
         return $fileName;
     }
 }
