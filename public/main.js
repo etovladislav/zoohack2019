@@ -452,7 +452,7 @@ var UserBoxComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [class]=\"'app-header header-shadow ' + (config$ | async).headerTheme\">\r\n  <div class=\"logo-src\"></div>\r\n  <div class=\"app-header__content\">\r\n    <div class=\"app-header-left\">\r\n    </div>\r\n    <div class=\"app-header-right\">\r\n    </div>\r\n  </div>\r\n  <div class=\"app-header__mobile-menu\">\r\n    <button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\"\r\n            [ngClass]=\"{'is-active' : globals.toggleSidebarMobile}\" (click)=\"toggleSidebarMobile()\">\r\n        <span class=\"hamburger-box\">\r\n            <span class=\"hamburger-inner\"></span>\r\n        </span>\r\n    </button>\r\n  </div>\r\n  <div class=\"app-header__menu\">\r\n    <span>\r\n        <button class=\"btn-icon btn-icon-only btn btn-primary\" [ngClass]=\"{'is-active' : globals.toggleHeaderMobile}\"\r\n                (click)=\"toggleHeaderMobile()\">\r\n            <div class=\"btn-icon-wrapper\">\r\n                <fa name=\"ellipsis-v\"></fa>\r\n            </div>\r\n        </button>\r\n    </span>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div [class]=\"'app-header header-shadow ' + (config$ | async).headerTheme\">\r\n  <div class=\"logo-src\"></div>\r\n  <div class=\"app-header__content\">\r\n    <div class=\"app-header-left\">\r\n    </div>\r\n    <div class=\"app-header-right\">\r\n    </div>\r\n  </div>\r\n  <div class=\"app-header__mobile-menu\">\r\n    <button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\"\r\n            [ngClass]=\"{'is-active' : globals.toggleSidebarMobile}\" (click)=\"toggleSidebarMobile()\">\r\n        <span class=\"hamburger-box\">\r\n            <span class=\"hamburger-inner\"></span>\r\n        </span>\r\n    </button>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -621,7 +621,7 @@ var LogoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [class]=\"'app-sidebar sidebar-shadow ' + (config$ | async).sidebarTheme\" (mouseover)=\"sidebarHover()\"\r\n     (mouseout)=\"sidebarHover()\">\r\n  <div class=\"app-header__logo\">\r\n    <div class=\"logo-src\"></div>\r\n    <div class=\"header__pane ml-auto\">\r\n      <button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\"\r\n              [ngClass]=\"{'is-active' : globals.toggleSidebar}\" (click)=\"toggleSidebar()\">\r\n        <span class=\"hamburger-box\">\r\n            <span class=\"hamburger-inner\"></span>\r\n        </span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"app-sidebar-content\">\r\n    <div class=\"app-sidebar-scroll\">\r\n      <perfect-scrollbar [autoPropagation]=\"true\">\r\n        <div class=\"v-sidebar-menu vsm-default\">\r\n          <div class=\"vsm-list\">\r\n            <div class=\"vsm-header\">Requests</div>\r\n            <div class=\"vsm-item\">\r\n              <a routerLink=\"/\" routerLinkActive=\"active-item\" class=\"vsm-link\">\r\n                <i class=\"vsm-icon pe-7s-graph2\"></i>\r\n                <span class=\"vsm-title\">Requests</span>\r\n              </a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </perfect-scrollbar>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div [class]=\"'app-sidebar sidebar-shadow ' + (config$ | async).sidebarTheme\" (mouseover)=\"sidebarHover()\"\r\n     (mouseout)=\"sidebarHover()\">\r\n  <div class=\"app-header__logo\">\r\n    <div class=\"logo-src\"></div>\r\n    <div class=\"header__pane ml-auto\">\r\n      <button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\"\r\n              [ngClass]=\"{'is-active' : globals.toggleSidebar}\" (click)=\"toggleSidebar()\">\r\n        <span class=\"hamburger-box\">\r\n            <span class=\"hamburger-inner\"></span>\r\n        </span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"app-sidebar-content\">\r\n    <div class=\"app-sidebar-scroll\">\r\n      <perfect-scrollbar [autoPropagation]=\"true\">\r\n        <div class=\"v-sidebar-menu vsm-default\">\r\n          <div class=\"vsm-list\">\r\n            <div class=\"vsm-header\">ЗАЯВКИ</div>\r\n            <div class=\"vsm-item\">\r\n              <a routerLink=\"/card\" routerLinkActive=\"active-item\" class=\"vsm-link\">\r\n                <i class=\"vsm-icon pe-7s-graph2\"></i>\r\n                <span class=\"vsm-title\">Все запросы</span>\r\n              </a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </perfect-scrollbar>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -859,7 +859,7 @@ var PagesLayoutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-card pb-3 mb-2 card\">\n  <div class=\"card-body\">\n    <p>\n      {{ card.text }}\n    </p>\n    <p class=\"mb-3\"><b>Location: </b>{{ card.location }}</p>\n    <p class=\"mb-3\"><b>Phone: </b>{{ card.phone }}</p>\n    <p>\n      <audio controls>\n        <source src=\"https://api.superwater.tech/storage/{{ card.voice}}\" type=\"audio/flac\">\n      </audio>\n    </p>\n    <div class=\"col-lg-6 widget-content p-0 mb-3\">\n      <div class=\"widget-content p-0\">\n        <div class=\"widget-content-outer\">\n          <div class=\"widget-content-wrapper\">\n            <div class=\"widget-content-left pr-2\">\n              <div class=\"widget-numbers fsize-1\">{{ card.text_confidence }}</div>\n            </div>\n            <div class=\"widget-content-right w-100\">\n              <div class=\"progress-bar-xs progress\">\n                <div class=\"progress-bar\"\n                     [ngClass]=\"{\n                        'bg-danger' : card.text_confidence_value > 65,\n                        'bg-warning' : card.text_confidence_value > 40 && card.text_confidence_value <= 65,\n                        'bg-success' : card.text_confidence_value <= 40\n                       }\"\n                     role=\"progressbar\" aria-valuenow=\"71\" aria-valuemin=\"0\"\n                     aria-valuemax=\"100\" [style.width]=\"card.text_confidence\"></div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"mb-3\">\n      <p *ngIf=\"card.categories.length == 0\">\n        Теги не найдены\n      </p>\n      <div *ngFor=\"let tag of card.categories\" class=\"badge mr-1 fsize-1 badge-pill badge-info\">{{ tag }}</div>\n    </div>\n    <google-map  height=\"300px\" width=\"100%\"  [zoom]=\"5\" [center]=\"card.latlng[0]\">\n      <map-marker *ngFor=\"let item of card.latlng\" [position]=\"item\"></map-marker>\n    </google-map>\n  </div>\n</div>\n<div class=\"col-lg-12 main-card pb-3 card\">\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Response</h5>\n    <form novalidate=\"\" class=\"ng-untouched ng-pristine ng-valid\">\n      <div class=\"position-relative form-group\">\n        <div class=\"position-relative form-group\">\n            <textarea\n                [disabled]=\"card.answer\"\n                class=\"form-control\"\n                id=\"exampleText\"\n                [(ngModel)]=\"answer\"\n                name=\"text\"></textarea>\n        </div>\n      </div>\n      <button class=\"mt-1 btn btn-primary\"\n              [disabled]=\"card.answer\"\n              (click)=\"sendAnswer(answer)\">Submit</button>\n    </form>\n  </div>\n</div>\n"
+module.exports = "<div class=\"main-card pb-3 mb-2 card\">\n  <div class=\"card-body\">\n    <p>\n      {{ card.text }}\n    </p>\n    <p class=\"mb-3\"><b>Location: </b>{{ card.location }}</p>\n    <p class=\"mb-3\"><b>Phone: </b>{{ card.phone }}</p>\n    <p>\n      <audio controls>\n        <source src=\"https://api.superwater.tech/storage/{{ card.voice}}\" type=\"audio/flac\">\n      </audio>\n    </p>\n    <div class=\"col-lg-6 widget-content p-0 mb-3\">\n      <div class=\"widget-content p-0\">\n        <div class=\"widget-content-outer\">\n          <div class=\"widget-content-wrapper\">\n            <div class=\"widget-content-left pr-2\">\n              <div class=\"widget-numbers fsize-1\">{{ card.text_confidence }}</div>\n            </div>\n            <div class=\"widget-content-right w-100\">\n              <div class=\"progress-bar-xs progress\">\n                <div class=\"progress-bar\"\n                     [ngClass]=\"{\n                        'bg-danger' : card.text_confidence_value > 65,\n                        'bg-warning' : card.text_confidence_value > 40 && card.text_confidence_value <= 65,\n                        'bg-success' : card.text_confidence_value <= 40\n                       }\"\n                     role=\"progressbar\" aria-valuenow=\"71\" aria-valuemin=\"0\"\n                     aria-valuemax=\"100\" [style.width]=\"card.text_confidence\"></div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"mb-3\">\n      <p *ngIf=\"card.categories.length == 0\">\n        Теги не найдены\n      </p>\n      <div *ngFor=\"let tag of card.categories\" class=\"badge mr-1 fsize-1 badge-pill badge-info\">{{ tag }}</div>\n    </div>\n    <google-map  height=\"300px\" width=\"100%\"  [zoom]=\"5\" [center]=\"card.latlng[0]\">\n      <map-marker *ngFor=\"let item of card.latlng\" [position]=\"item\"></map-marker>\n    </google-map>\n  </div>\n</div>\n<div class=\"col-lg-12 main-card pb-3 card\">\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Ответить</h5>\n    <form novalidate=\"\" class=\"ng-untouched ng-pristine ng-valid\">\n      <div class=\"position-relative form-group\">\n        <div class=\"position-relative form-group\">\n            <textarea\n                [disabled]=\"card.answer\"\n                class=\"form-control\"\n                id=\"exampleText\"\n                [(ngModel)]=\"answer\"\n                name=\"text\"></textarea>\n        </div>\n      </div>\n      <button class=\"mt-1 btn btn-primary\"\n              [disabled]=\"card.answer\"\n              (click)=\"sendAnswer(answer)\">Отправить</button>\n    </form>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1138,6 +1138,67 @@ var LoginBoxedComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/MainPages/record/record-mic.component.html":
+/*!************************************************************!*\
+  !*** ./src/app/MainPages/record/record-mic.component.html ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"h-100 bg-animation\">\n  <div class=\"d-flex h-100 justify-content-center align-items-center\">\n    <div class=\"mx-auto app-login-box col-md-8\">\n      <div class=\"modal-dialog w-100 mx-auto\">\n        <div class=\"modal-content\">\n          <div class=\"modal-body\">\n            <div class=\"h5 modal-title text-center\">\n              <h4 class=\"mt-2\">\n                <div>Загрузка примера аудиофайла</div>\n              </h4>\n            </div>\n            <form ngForm #testForm=\"ngForm\">\n              <div class=\"form-group\">\n                <div class=\"container\">\n                  <input type=\"file\" name=\"photo\" ng2FileSelect [uploader]=\"uploader\" />\n\n                </div>\n              </div>\n            </form>\n            <div class=\"divider\"></div>\n          </div>\n          <div class=\"modal-footer clearfix\">\n            <div class=\"float-right\">\n              <button type=\"button\" class=\"btn btn-primary btn-lg\"\n                      (click)=\"uploader.uploadAll()\"\n                      [disabled]=\"!uploader.getNotUploadedItems().length\" >\n                Загрузить\n              </button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/MainPages/record/record-mic.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/MainPages/record/record-mic.component.ts ***!
+  \**********************************************************/
+/*! exports provided: RecordMicComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecordMicComponent", function() { return RecordMicComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ng2_file_upload__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ng2-file-upload */ "./node_modules/ng2-file-upload/fesm5/ng2-file-upload.js");
+/* harmony import */ var _configs_UrlConfig__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../configs/UrlConfig */ "./src/configs/UrlConfig.ts");
+
+
+
+
+var RecordMicComponent = /** @class */ (function () {
+    function RecordMicComponent() {
+        this.uploader = new ng2_file_upload__WEBPACK_IMPORTED_MODULE_2__["FileUploader"]({
+            url: _configs_UrlConfig__WEBPACK_IMPORTED_MODULE_3__["UrlConfig"].API + "/audio",
+            itemAlias: 'audio'
+        });
+    }
+    RecordMicComponent.prototype.ngOnInit = function () {
+        this.uploader.onAfterAddingFile = function (file) {
+            file.withCredentials = false;
+        };
+        this.uploader.onCompleteItem = function (item, response, status, headers) {
+            if (status !== 200) {
+                alert('Произошла ошибка');
+                return;
+            }
+            alert('Файл успешно загружен');
+        };
+    };
+    RecordMicComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-record-mic',
+            template: __webpack_require__(/*! ./record-mic.component.html */ "./src/app/MainPages/record/record-mic.component.html")
+        })
+    ], RecordMicComponent);
+    return RecordMicComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/ThemeOptions/store/config.actions.ts":
 /*!******************************************************!*\
   !*** ./src/app/ThemeOptions/store/config.actions.ts ***!
@@ -1326,6 +1387,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MainPages/infoCards/info-cards.component */ "./src/app/MainPages/infoCards/info-cards.component.ts");
 /* harmony import */ var _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MainPages/infoCard/info-card.component */ "./src/app/MainPages/infoCard/info-card.component.ts");
 /* harmony import */ var _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MainPages/login/login-boxed.component */ "./src/app/MainPages/login/login-boxed.component.ts");
+/* harmony import */ var _MainPages_record_record_mic_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./MainPages/record/record-mic.component */ "./src/app/MainPages/record/record-mic.component.ts");
+
 
 
 
@@ -1339,9 +1402,10 @@ var routes = [
         component: _Layout_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_3__["BaseLayoutComponent"],
         children: [
             { path: '', component: _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_4__["InfoCardsComponent"] },
-            { path: 'card/:id', component: _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_5__["InfoCardComponent"] },
+            { path: ':id', component: _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_5__["InfoCardComponent"] },
         ]
     },
+    { path: 'rec', component: _MainPages_record_record_mic_component__WEBPACK_IMPORTED_MODULE_7__["RecordMicComponent"] },
     { path: '', component: _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_6__["LoginBoxedComponent"] },
     { path: '**', redirectTo: 'card' }
 ];
@@ -1433,23 +1497,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_google_maps__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/google-maps */ "./node_modules/@angular/google-maps/fesm5/google-maps.js");
 /* harmony import */ var angular_notifier__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angular-notifier */ "./node_modules/angular-notifier/fesm5/angular-notifier.js");
 /* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.es5.js");
-/* harmony import */ var angular_font_awesome__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! angular-font-awesome */ "./node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
-/* harmony import */ var ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ngx-perfect-scrollbar */ "./node_modules/ngx-perfect-scrollbar/dist/ngx-perfect-scrollbar.es5.js");
-/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm5/ng2-charts.js");
-/* harmony import */ var _Layout_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./Layout/base-layout/base-layout.component */ "./src/app/Layout/base-layout/base-layout.component.ts");
-/* harmony import */ var _Layout_pages_layout_pages_layout_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Layout/pages-layout/pages-layout.component */ "./src/app/Layout/pages-layout/pages-layout.component.ts");
-/* harmony import */ var _Layout_Components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./Layout/Components/page-title/page-title.component */ "./src/app/Layout/Components/page-title/page-title.component.ts");
-/* harmony import */ var _Layout_Components_header_header_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Layout/Components/header/header.component */ "./src/app/Layout/Components/header/header.component.ts");
-/* harmony import */ var _Layout_Components_header_elements_search_box_search_box_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Layout/Components/header/elements/search-box/search-box.component */ "./src/app/Layout/Components/header/elements/search-box/search-box.component.ts");
-/* harmony import */ var _Layout_Components_header_elements_user_box_user_box_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./Layout/Components/header/elements/user-box/user-box.component */ "./src/app/Layout/Components/header/elements/user-box/user-box.component.ts");
-/* harmony import */ var _Layout_Components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./Layout/Components/sidebar/sidebar.component */ "./src/app/Layout/Components/sidebar/sidebar.component.ts");
-/* harmony import */ var _Layout_Components_sidebar_elements_logo_logo_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./Layout/Components/sidebar/elements/logo/logo.component */ "./src/app/Layout/Components/sidebar/elements/logo/logo.component.ts");
-/* harmony import */ var _Layout_Components_footer_footer_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./Layout/Components/footer/footer.component */ "./src/app/Layout/Components/footer/footer.component.ts");
-/* harmony import */ var _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./MainPages/infoCards/info-cards.component */ "./src/app/MainPages/infoCards/info-cards.component.ts");
-/* harmony import */ var _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./MainPages/infoCard/info-card.component */ "./src/app/MainPages/infoCard/info-card.component.ts");
-/* harmony import */ var _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./MainPages/login/login-boxed.component */ "./src/app/MainPages/login/login-boxed.component.ts");
-/* harmony import */ var _Utils_Interceptors_RequestProcessInterceptor__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./Utils/Interceptors/RequestProcessInterceptor */ "./src/app/Utils/Interceptors/RequestProcessInterceptor.ts");
+/* harmony import */ var ng2_file_upload__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ng2-file-upload */ "./node_modules/ng2-file-upload/fesm5/ng2-file-upload.js");
+/* harmony import */ var angular_font_awesome__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! angular-font-awesome */ "./node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ngx-perfect-scrollbar */ "./node_modules/ngx-perfect-scrollbar/dist/ngx-perfect-scrollbar.es5.js");
+/* harmony import */ var ng2_charts__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ng2-charts */ "./node_modules/ng2-charts/fesm5/ng2-charts.js");
+/* harmony import */ var _Layout_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Layout/base-layout/base-layout.component */ "./src/app/Layout/base-layout/base-layout.component.ts");
+/* harmony import */ var _Layout_pages_layout_pages_layout_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./Layout/pages-layout/pages-layout.component */ "./src/app/Layout/pages-layout/pages-layout.component.ts");
+/* harmony import */ var _Layout_Components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./Layout/Components/page-title/page-title.component */ "./src/app/Layout/Components/page-title/page-title.component.ts");
+/* harmony import */ var _Layout_Components_header_header_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./Layout/Components/header/header.component */ "./src/app/Layout/Components/header/header.component.ts");
+/* harmony import */ var _Layout_Components_header_elements_search_box_search_box_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./Layout/Components/header/elements/search-box/search-box.component */ "./src/app/Layout/Components/header/elements/search-box/search-box.component.ts");
+/* harmony import */ var _Layout_Components_header_elements_user_box_user_box_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./Layout/Components/header/elements/user-box/user-box.component */ "./src/app/Layout/Components/header/elements/user-box/user-box.component.ts");
+/* harmony import */ var _Layout_Components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./Layout/Components/sidebar/sidebar.component */ "./src/app/Layout/Components/sidebar/sidebar.component.ts");
+/* harmony import */ var _Layout_Components_sidebar_elements_logo_logo_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./Layout/Components/sidebar/elements/logo/logo.component */ "./src/app/Layout/Components/sidebar/elements/logo/logo.component.ts");
+/* harmony import */ var _Layout_Components_footer_footer_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./Layout/Components/footer/footer.component */ "./src/app/Layout/Components/footer/footer.component.ts");
+/* harmony import */ var _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./MainPages/infoCards/info-cards.component */ "./src/app/MainPages/infoCards/info-cards.component.ts");
+/* harmony import */ var _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./MainPages/infoCard/info-card.component */ "./src/app/MainPages/infoCard/info-card.component.ts");
+/* harmony import */ var _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./MainPages/login/login-boxed.component */ "./src/app/MainPages/login/login-boxed.component.ts");
+/* harmony import */ var _MainPages_record_record_mic_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./MainPages/record/record-mic.component */ "./src/app/MainPages/record/record-mic.component.ts");
+/* harmony import */ var _Utils_Interceptors_RequestProcessInterceptor__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./Utils/Interceptors/RequestProcessInterceptor */ "./src/app/Utils/Interceptors/RequestProcessInterceptor.ts");
+
 
 
 
@@ -1490,6 +1557,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var DEFAULT_PERFECT_SCROLLBAR_CONFIG = {
     suppressScrollX: true
 };
@@ -1504,21 +1572,22 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 // LAYOUT
                 _app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"],
-                _Layout_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_20__["BaseLayoutComponent"],
-                _Layout_pages_layout_pages_layout_component__WEBPACK_IMPORTED_MODULE_21__["PagesLayoutComponent"],
-                _Layout_Components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_22__["PageTitleComponent"],
+                _Layout_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_21__["BaseLayoutComponent"],
+                _Layout_pages_layout_pages_layout_component__WEBPACK_IMPORTED_MODULE_22__["PagesLayoutComponent"],
+                _Layout_Components_page_title_page_title_component__WEBPACK_IMPORTED_MODULE_23__["PageTitleComponent"],
                 // HEADER
-                _Layout_Components_header_header_component__WEBPACK_IMPORTED_MODULE_23__["HeaderComponent"],
-                _Layout_Components_header_elements_search_box_search_box_component__WEBPACK_IMPORTED_MODULE_24__["SearchBoxComponent"],
-                _Layout_Components_header_elements_user_box_user_box_component__WEBPACK_IMPORTED_MODULE_25__["UserBoxComponent"],
+                _Layout_Components_header_header_component__WEBPACK_IMPORTED_MODULE_24__["HeaderComponent"],
+                _Layout_Components_header_elements_search_box_search_box_component__WEBPACK_IMPORTED_MODULE_25__["SearchBoxComponent"],
+                _Layout_Components_header_elements_user_box_user_box_component__WEBPACK_IMPORTED_MODULE_26__["UserBoxComponent"],
                 // SIDEBAR
-                _Layout_Components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_26__["SidebarComponent"],
-                _Layout_Components_sidebar_elements_logo_logo_component__WEBPACK_IMPORTED_MODULE_27__["LogoComponent"],
+                _Layout_Components_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_27__["SidebarComponent"],
+                _Layout_Components_sidebar_elements_logo_logo_component__WEBPACK_IMPORTED_MODULE_28__["LogoComponent"],
                 // FOOTER
-                _Layout_Components_footer_footer_component__WEBPACK_IMPORTED_MODULE_28__["FooterComponent"],
-                _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_29__["InfoCardsComponent"],
-                _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_30__["InfoCardComponent"],
-                _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_31__["LoginBoxedComponent"]
+                _Layout_Components_footer_footer_component__WEBPACK_IMPORTED_MODULE_29__["FooterComponent"],
+                _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_30__["InfoCardsComponent"],
+                _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_31__["InfoCardComponent"],
+                _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_32__["LoginBoxedComponent"],
+                _MainPages_record_record_mic_component__WEBPACK_IMPORTED_MODULE_33__["RecordMicComponent"]
             ],
             imports: [
                 _angular_google_maps__WEBPACK_IMPORTED_MODULE_13__["GoogleMapsModule"],
@@ -1539,27 +1608,29 @@ var AppModule = /** @class */ (function () {
                     }
                 }),
                 // Angular Bootstrap Components
-                ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_18__["PerfectScrollbarModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_17__["NgbModule"],
-                angular_font_awesome__WEBPACK_IMPORTED_MODULE_16__["AngularFontAwesomeModule"],
+                ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_19__["PerfectScrollbarModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_18__["NgbModule"],
+                angular_font_awesome__WEBPACK_IMPORTED_MODULE_17__["AngularFontAwesomeModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClientModule"],
                 // Charts
-                ng2_charts__WEBPACK_IMPORTED_MODULE_19__["ChartsModule"],
+                ng2_charts__WEBPACK_IMPORTED_MODULE_20__["ChartsModule"],
+                ng2_file_upload__WEBPACK_IMPORTED_MODULE_16__["FileUploadModule"],
             ],
             providers: [
                 {
-                    provide: ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_18__["PERFECT_SCROLLBAR_CONFIG"],
+                    provide: ngx_perfect_scrollbar__WEBPACK_IMPORTED_MODULE_19__["PERFECT_SCROLLBAR_CONFIG"],
                     // DROPZONE_CONFIG,
                     useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
                 },
                 {
                     provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HTTP_INTERCEPTORS"],
-                    useClass: _Utils_Interceptors_RequestProcessInterceptor__WEBPACK_IMPORTED_MODULE_32__["RequestProcessInterceptor"],
+                    useClass: _Utils_Interceptors_RequestProcessInterceptor__WEBPACK_IMPORTED_MODULE_34__["RequestProcessInterceptor"],
                     multi: true
                 },
                 ngx_cookie_service__WEBPACK_IMPORTED_MODULE_15__["CookieService"],
+                ng2_file_upload__WEBPACK_IMPORTED_MODULE_16__["FileSelectDirective"],
                 _ThemeOptions_store_config_actions__WEBPACK_IMPORTED_MODULE_7__["ConfigActions"],
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_12__["AppComponent"]]
