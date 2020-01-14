@@ -8,6 +8,5 @@ use Illuminate\Http\UploadedFile;
 
 interface VoiceRequestResolver
 {
-
-    public function execute(string $phone, UploadedFile $requestAudioRecord) : void ;
+    public function execute(string $phone, string $requestAudioRecord) : void ;
 }

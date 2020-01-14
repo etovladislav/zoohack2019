@@ -55,7 +55,7 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
         $this->textCategoryDetector = $textCategoryDetector;
     }
 
-    public function execute(string $phone, UploadedFile $requestAudioRecord): void
+    public function execute(string $phone, string $requestAudioRecord) : void
     {
         $filePath           = FileUtil::saveFromUrl($requestAudioRecord);
         $text               = $this->speechToText->speechToText(storage_path('app/public') . '/' . $filePath, null);
