@@ -22,5 +22,5 @@ Route::middleware('auth:api')->group(
     }
 );
 
-Route::get('/audio', 'IndexController@audio');
+Route::get('/audio', 'IndexController@vox');
 Route::get('/{any}', 'IndexController@index')->where('any', '.*');
