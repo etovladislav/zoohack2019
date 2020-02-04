@@ -28,6 +28,11 @@ final class IndexController extends Controller
         $requestResolver->execute($request->get('phone'), $request->get('media'));
     }
 
+    public function settingGet()
+    {
+        return SettingModel::query()->first();
+    }
+
     public function setting(
         Request $request
     ): void {

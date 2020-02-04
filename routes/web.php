@@ -19,7 +19,8 @@ Route::middleware('auth:api')->group(
         Route::get('/requests', 'RequestsController@findAll');
         Route::get('/requests/{id}', 'RequestsController@findById');
         Route::post('/answer', 'SmsController@sendSms');
-        Route::post('/setting', 'IndexController@vox');
+        Route::post('/setting', 'IndexController@setting');
+        Route::get('/setting', 'IndexController@settingGet');
 
     }
 );
