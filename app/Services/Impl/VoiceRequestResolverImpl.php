@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Services\Impl;
 
 use App\FileUtil;
+use App\Mail\NewRequest;
+use App\Models\SettingModel;
 use App\Repositories\RequestsRepository;
 use App\Services\GoogleNeuralService;
 use App\Services\GoogleSpeechKitService;
@@ -13,6 +15,7 @@ use App\Services\RegionByPhoneNumberDetector;
 use App\Services\TextCategoryDetector;
 use App\Services\VoiceRequestResolver;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Mail;
 
 final class VoiceRequestResolverImpl implements VoiceRequestResolver
 {
@@ -55,7 +58,7 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
         $this->textCategoryDetector = $textCategoryDetector;
     }
 
-    public function execute(string $phone, string $requestAudioRecord) : void
+    public function execute(string $phone, string $requestAudioRecord): void
     {
         $filePath           = FileUtil::saveFromUrl($requestAudioRecord);
         $text               = $this->speechToText->speechToText(storage_path('app/public') . '/' . $filePath, null);
@@ -68,7 +71,7 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
         foreach ($internalCategories as $item) {
             $categories['categories'][] = ['name' => $item, 'confidence' => 0.8];
         }
-        $this->repository->save(
+        $model = $this->repository->save(
             $phone,
             $region['country_name'] . ', ' . $region['location'],
             $text->getTranscription(),
@@ -76,6 +79,11 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
             $categories,
             $filePath,
             $textLocation
+        );
+        Mail::to(SettingModel::query()->first()->email)->send(
+            new NewRequest(
+                'www.problem-support.com/card/' . $model->id, $text->getTranscription()
+            )
         );
     }
 }

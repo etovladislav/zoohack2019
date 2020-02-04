@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Repositories;
 
+use App\Models\RequestModel;
 use Illuminate\Support\Collection;
 
 interface RequestsRepository
@@ -17,7 +18,7 @@ interface RequestsRepository
         array $categories,
         string $voice,
         string $textLocation
-    ): void;
+    ): RequestModel;
 
     public function findAll() : Collection;
 }

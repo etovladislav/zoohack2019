@@ -19,7 +19,7 @@ final class RequestRepositoryImpl implements RequestsRepository
         array $categories,
         string $voice,
         string $textLocation
-    ): void {
+    ): RequestModel {
         $model                  = new RequestModel();
         $model->phone           = $phone;
         $model->location        = $location;
@@ -29,6 +29,7 @@ final class RequestRepositoryImpl implements RequestsRepository
         $model->voice           = $voice;
         $model->text_location   = $textLocation;
         $model->save();
+        return $model;
     }
 
     public function findAll(): Collection
