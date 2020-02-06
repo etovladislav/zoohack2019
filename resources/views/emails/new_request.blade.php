@@ -1,7 +1,8 @@
 @component('mail::message')
 # Новая заявка
 
-Поступила новая заявка
+Поступила новая заявка <br>
+{{$text}}
 
 @component('mail::button', ['url' => $url])
 Посмотреть
