@@ -23,7 +23,9 @@ final class GoogleSpeechKitServiceImpl implements GoogleSpeechKitService
         $config       = (new RecognitionConfig())->setEncoding($encoding)
                                                  ->setAudioChannelCount(2)
                                                  ->setLanguageCode($languageCode)
-                                                 ->setAlternativeLanguageCodes(['ru-RU']);
+                                                 ->setAlternativeLanguageCodes(
+                                                     ['ru-RU', '	uk-UA', 'hy-AM', 'ka-GE']
+                                                 );
         $client       = new SpeechClient();
         try {
             $response   = $client->recognize($config, $audio);
