@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2d1171d-3d0f-4692-b090-92656cab6c1c" name="Default Changelist" comment="Region by phone number detector">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0094457-fb5c-4a6e-9774-1c1a3e542a79.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d0094457-fb5c-4a6e-9774-1c1a3e542a79.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/no-internet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/no-internet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/FileUtil.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/FileUtil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Impl/VoiceRequestResolverImpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Impl/VoiceRequestResolverImpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/token.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +252,7 @@
       <workItem from="1580978547387" duration="6000" />
       <workItem from="1580978737102" duration="817000" />
       <workItem from="1581013208100" duration="167000" />
-      <workItem from="1581014656717" duration="249000" />
+      <workItem from="1581014656717" duration="855000" />
     </task>
     <task id="LOCAL-00001" summary="Add google services">
       <created>1573936144962</created>
