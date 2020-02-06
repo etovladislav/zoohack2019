@@ -60,8 +60,9 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
 
     public function execute(string $phone, string $requestAudioRecord): void
     {
-        $filePath           = FileUtil::saveFromUrl($requestAudioRecord);
-        $text               = $this->speechToText->speechToText(storage_path('app/public') . '/' . $filePath, null);
+        list($flacFile, $mp3File) = FileUtil::saveFromUrl($requestAudioRecord);
+        exec("ffmpeg -i $flacFile $mp3File");
+        $text               = $this->speechToText->speechToText(storage_path('app/public') . '/' . $flacFile, null);
         $enText             = $this->translator->translate($text->getTranscription(), 'en');
         $analysedText       = $this->textAnalyser->analyseText($enText);
         $categories         = $analysedText->getCategories();
@@ -77,7 +78,7 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
             $text->getTranscription(),
             $text->getConfidence() * 100,
             $categories,
-            $filePath,
+            $mp3File,
             $textLocation
         );
         Mail::to(SettingModel::query()->first()->email)->send(
