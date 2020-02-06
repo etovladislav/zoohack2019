@@ -21,6 +21,6 @@ final class FileUtil
         curl_close($ch);
         fclose($fp);
 
-        return ["$filepath/$fileName.flac", "$filepath/$fileName.mp3"];
+        return ["$fileName.flac", "$fileName.mp3"];
     }
 }

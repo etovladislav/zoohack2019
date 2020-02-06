@@ -4,6 +4,7 @@
     <list default="true" id="d2d1171d-3d0f-4692-b090-92656cab6c1c" name="Default Changelist" comment="Region by phone number detector">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/FileUtil.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/FileUtil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Impl/VoiceRequestResolverImpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Impl/VoiceRequestResolverImpl.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +253,7 @@
       <workItem from="1580978547387" duration="6000" />
       <workItem from="1580978737102" duration="817000" />
       <workItem from="1581013208100" duration="167000" />
-      <workItem from="1581014656717" duration="855000" />
+      <workItem from="1581014656717" duration="991000" />
     </task>
     <task id="LOCAL-00001" summary="Add google services">
       <created>1573936144962</created>

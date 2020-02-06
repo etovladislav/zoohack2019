@@ -35,12 +35,12 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
     /**
      * VoiceRequestResolverImpl constructor.
      *
-     * @param GoogleTranslateService      $translator
-     * @param GoogleSpeechKitService      $speechToText
-     * @param GoogleNeuralService         $textAnalyser
-     * @param RequestsRepository          $repository
+     * @param GoogleTranslateService $translator
+     * @param GoogleSpeechKitService $speechToText
+     * @param GoogleNeuralService $textAnalyser
+     * @param RequestsRepository $repository
      * @param RegionByPhoneNumberDetector $regionDetector
-     * @param TextCategoryDetector        $textCategoryDetector
+     * @param TextCategoryDetector $textCategoryDetector
      */
     public function __construct(
         GoogleTranslateService $translator,
@@ -49,26 +49,28 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
         RequestsRepository $repository,
         RegionByPhoneNumberDetector $regionDetector,
         TextCategoryDetector $textCategoryDetector
-    ) {
-        $this->translator           = $translator;
-        $this->speechToText         = $speechToText;
-        $this->textAnalyser         = $textAnalyser;
-        $this->repository           = $repository;
-        $this->regionDetector       = $regionDetector;
+    )
+    {
+        $this->translator = $translator;
+        $this->speechToText = $speechToText;
+        $this->textAnalyser = $textAnalyser;
+        $this->repository = $repository;
+        $this->regionDetector = $regionDetector;
         $this->textCategoryDetector = $textCategoryDetector;
     }
 
     public function execute(string $phone, string $requestAudioRecord): void
     {
         list($flacFile, $mp3File) = FileUtil::saveFromUrl($requestAudioRecord);
-        exec("ffmpeg -i $flacFile $mp3File");
-        $text               = $this->speechToText->speechToText(storage_path('app/public') . '/' . $flacFile, null);
-        $enText             = $this->translator->translate($text->getTranscription(), 'en');
-        $analysedText       = $this->textAnalyser->analyseText($enText);
-        $categories         = $analysedText->getCategories();
-        $region             = $this->regionDetector->execute($phone);
+        $storagePath = storage_path('app/public');
+        exec("ffmpeg -i $storagePath/$flacFile $storagePath/$mp3File");
+        $text = $this->speechToText->speechToText($storagePath . '/' . $flacFile, null);
+        $enText = $this->translator->translate($text->getTranscription(), 'en');
+        $analysedText = $this->textAnalyser->analyseText($enText);
+        $categories = $analysedText->getCategories();
+        $region = $this->regionDetector->execute($phone);
         $internalCategories = $this->textCategoryDetector->execute($enText);
-        $textLocation       = $analysedText->getEntites();
+        $textLocation = $analysedText->getEntites();
         foreach ($internalCategories as $item) {
             $categories['categories'][] = ['name' => $item, 'confidence' => 0.8];
         }
