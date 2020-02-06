@@ -24,7 +24,7 @@ final class GoogleSpeechKitServiceImpl implements GoogleSpeechKitService
                                                  ->setAudioChannelCount(2)
                                                  ->setLanguageCode($languageCode)
                                                  ->setAlternativeLanguageCodes(
-                                                     ['ru-RU', '	uk-UA', 'hy-AM', 'ka-GE']
+                                                     ['ru-RU', 'uk-UA', 'hy-AM', 'ka-GE']
                                                  );
         $client       = new SpeechClient();
         try {
