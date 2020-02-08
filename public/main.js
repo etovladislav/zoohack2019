@@ -317,7 +317,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app-footer\">\r\n  <div class=\"app-footer__inner\">\r\n    <div class=\"app-footer-left\">\r\n      <span class=\"pl-2\">Copyright 2019 - Zoohack</span>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"app-footer\">\n  <div class=\"app-footer__inner\">\n    <div class=\"app-footer-left\">\n      <span class=\"pl-2\">Copyright 2019 - Zoohack</span>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -361,7 +361,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"search-wrapper\" [class.active]=\"isActive\">\r\n  <div class=\"input-holder\">\r\n    <input type=\"text\" placeholder=\"Type to search\" class=\"search-input\">\r\n    <button class=\"search-icon\" (click)=\"isActive = true\"><span></span></button>\r\n  </div>\r\n  <button class=\"close\" (click)=\"isActive = false\"></button>\r\n</div>\r\n"
+module.exports = "<div class=\"search-wrapper\" [class.active]=\"isActive\">\n  <div class=\"input-holder\">\n    <input type=\"text\" placeholder=\"Type to search\" class=\"search-input\">\n    <button class=\"search-icon\" (click)=\"isActive = true\"><span></span></button>\n  </div>\n  <button class=\"close\" (click)=\"isActive = false\"></button>\n</div>\n"
 
 /***/ }),
 
@@ -405,7 +405,7 @@ var SearchBoxComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"d-flex\">\r\n  <div class=\"header-btn-lg pr-0\">\r\n    <div class=\"widget-content p-0\">\r\n      <div class=\"widget-content-wrapper\">\r\n        <div class=\"widget-content-left\">\r\n          <div class=\"btn-group\" ngbDropdown placement=\"bottom-right\">\r\n            <button type=\"button\" class=\"btn btn-link p-0 mr-2\" ngbDropdownToggle>\r\n              <span>\r\n                <div class=\"icon-wrapper icon-wrapper-alt rounded-circle\">\r\n                  <img width=\"42\" src=\"./assets/images/avatars/1.jpg\" alt=\"\" class=\"rounded-circle\">\r\n                </div>\r\n              </span>\r\n            </button>\r\n            <div ngbDropdownMenu>\r\n              <button class=\"dropdown-item\">Menus</button>\r\n              <button class=\"dropdown-item\">Settings</button>\r\n              <h6 class=\"dropdown-header\">Header</h6>\r\n              <button class=\"dropdown-item\">Actions</button>\r\n              <div class=\"dropdown-divider\"></div>\r\n              <button class=\"dropdown-item\">Dividers</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"d-flex\">\n  <div class=\"header-btn-lg pr-0\">\n    <div class=\"widget-content p-0\">\n      <div class=\"widget-content-wrapper\">\n        <div class=\"widget-content-left\">\n          <div class=\"btn-group\" ngbDropdown placement=\"bottom-right\">\n            <button type=\"button\" class=\"btn btn-link p-0 mr-2\" ngbDropdownToggle>\n              <span>\n                <div class=\"icon-wrapper icon-wrapper-alt rounded-circle\">\n                  <img width=\"42\" src=\"./assets/images/avatars/1.jpg\" alt=\"\" class=\"rounded-circle\">\n                </div>\n              </span>\n            </button>\n            <div ngbDropdownMenu>\n              <button class=\"dropdown-item\">Menus</button>\n              <button class=\"dropdown-item\">Settings</button>\n              <h6 class=\"dropdown-header\">Header</h6>\n              <button class=\"dropdown-item\">Actions</button>\n              <div class=\"dropdown-divider\"></div>\n              <button class=\"dropdown-item\">Dividers</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -452,7 +452,7 @@ var UserBoxComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [class]=\"'app-header header-shadow ' + (config$ | async).headerTheme\">\r\n  <div class=\"logo-src\"></div>\r\n  <div class=\"app-header__content\">\r\n    <div class=\"app-header-left\">\r\n    </div>\r\n    <div class=\"app-header-right\">\r\n    </div>\r\n  </div>\r\n  <div class=\"app-header__mobile-menu\">\r\n    <button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\"\r\n            [ngClass]=\"{'is-active' : globals.toggleSidebarMobile}\" (click)=\"toggleSidebarMobile()\">\r\n        <span class=\"hamburger-box\">\r\n            <span class=\"hamburger-inner\"></span>\r\n        </span>\r\n    </button>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div [class]=\"'app-header header-shadow ' + (config$ | async).headerTheme\">\n  <div class=\"logo-src\"></div>\n  <div class=\"app-header__content\">\n    <div class=\"app-header-left\">\n    </div>\n    <div class=\"app-header-right\">\n    </div>\n  </div>\n  <div class=\"app-header__mobile-menu\">\n    <button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\"\n            [ngClass]=\"{'is-active' : globals.toggleSidebarMobile}\" (click)=\"toggleSidebarMobile()\">\n        <span class=\"hamburger-box\">\n            <span class=\"hamburger-inner\"></span>\n        </span>\n    </button>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -524,7 +524,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app-page-title\">\r\n  <div class=\"page-title-wrapper\">\r\n    <div class=\"page-title-heading\">\r\n      <div class=\"page-title-icon\">\r\n        <i class=\"icon {{icon}}\"></i>\r\n      </div>\r\n      <div>\r\n        {{heading}}\r\n        <div\r\n          class=\"page-title-subheading\">\r\n          {{subheading}}\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"page-title-actions\">\r\n      <button type=\"button\" class=\"btn-shadow mr-3 btn btn-dark\">\r\n        <fa name=\"star\"></fa>\r\n      </button>\r\n      <button type=\"button\" class=\"btn-shadow d-inline-flex align-items-center btn btn-success\">\r\n        <fa class=\"mr-2\" name=\"plus\"></fa>\r\n        Create New\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"app-page-title\">\n  <div class=\"page-title-wrapper\">\n    <div class=\"page-title-heading\">\n      <div class=\"page-title-icon\">\n        <i class=\"icon {{icon}}\"></i>\n      </div>\n      <div>\n        {{heading}}\n        <div\n          class=\"page-title-subheading\">\n          {{subheading}}\n        </div>\n      </div>\n    </div>\n    <div class=\"page-title-actions\">\n      <button type=\"button\" class=\"btn-shadow mr-3 btn btn-dark\">\n        <fa name=\"star\"></fa>\n      </button>\n      <button type=\"button\" class=\"btn-shadow d-inline-flex align-items-center btn btn-success\">\n        <fa class=\"mr-2\" name=\"plus\"></fa>\n        Create New\n      </button>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -577,7 +577,7 @@ var PageTitleComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  logo works!\r\n</p>\r\n"
+module.exports = "<p>\n  logo works!\n</p>\n"
 
 /***/ }),
 
@@ -621,7 +621,7 @@ var LogoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [class]=\"'app-sidebar sidebar-shadow ' + (config$ | async).sidebarTheme\" (mouseover)=\"sidebarHover()\"\r\n     (mouseout)=\"sidebarHover()\">\r\n  <div class=\"app-header__logo\">\r\n    <div class=\"logo-src\"></div>\r\n    <div class=\"header__pane ml-auto\">\r\n      <button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\"\r\n              [ngClass]=\"{'is-active' : globals.toggleSidebar}\" (click)=\"toggleSidebar()\">\r\n        <span class=\"hamburger-box\">\r\n            <span class=\"hamburger-inner\"></span>\r\n        </span>\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"app-sidebar-content\">\r\n    <div class=\"app-sidebar-scroll\">\r\n      <perfect-scrollbar [autoPropagation]=\"true\">\r\n        <div class=\"v-sidebar-menu vsm-default\">\r\n          <div class=\"vsm-list\">\r\n            <div class=\"vsm-header\">ЗАЯВКИ</div>\r\n            <div class=\"vsm-item\">\r\n              <a routerLink=\"/card\" routerLinkActive=\"active-item\" class=\"vsm-link\">\r\n                <i class=\"vsm-icon pe-7s-graph2\"></i>\r\n                <span class=\"vsm-title\">Все запросы</span>\r\n              </a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </perfect-scrollbar>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div [class]=\"'app-sidebar sidebar-shadow ' + (config$ | async).sidebarTheme\" (mouseover)=\"sidebarHover()\"\n     (mouseout)=\"sidebarHover()\">\n  <div class=\"app-header__logo\">\n    <div class=\"logo-src\"></div>\n    <div class=\"header__pane ml-auto\">\n      <button type=\"button\" class=\"hamburger close-sidebar-btn hamburger--elastic\"\n              [ngClass]=\"{'is-active' : globals.toggleSidebar}\" (click)=\"toggleSidebar()\">\n        <span class=\"hamburger-box\">\n            <span class=\"hamburger-inner\"></span>\n        </span>\n      </button>\n    </div>\n  </div>\n  <div class=\"app-sidebar-content\">\n    <div class=\"app-sidebar-scroll\">\n      <perfect-scrollbar [autoPropagation]=\"true\">\n        <div class=\"v-sidebar-menu vsm-default\">\n          <div class=\"vsm-list\">\n            <div class=\"vsm-header\">ЗАЯВКИ</div>\n            <div class=\"vsm-item\">\n              <a routerLink=\"/card\" routerLinkActive=\"active-item\" class=\"vsm-link\">\n                <i class=\"vsm-icon pe-7s-graph2\"></i>\n                <span class=\"vsm-title\">Все запросы</span>\n              </a>\n            </div>\n          </div>\n          <div class=\"vsm-list\">\n            <div class=\"vsm-header\">Настройки</div>\n            <div class=\"vsm-item\">\n              <a routerLink=\"/card/settings\" routerLinkActive=\"active-item\" class=\"vsm-link\">\n                <i class=\"vsm-icon pe-7s-graph2\"></i>\n                <span class=\"vsm-title\">Настройки системы</span>\n              </a>\n            </div>\n          </div>\n        </div>\n      </perfect-scrollbar>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -710,7 +710,7 @@ var SidebarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [ngClass]=\"{\r\n'closed-sidebar' : globals.toggleSidebar,\r\n'closed-sidebar-md' : globals.toggleSidebarMobile,\r\n'closed-sidebar-open': globals.sidebarHover || globals.toggleSidebarMobile,\r\n'header-menu-open' : globals.toggleHeaderMobile,\r\n'fixed-footer' : globals.toggleFixedFooter\r\n}\" [class]=\"'app-container app-theme-white'\">\r\n  <app-header></app-header>\r\n  <app-sidebar></app-sidebar>\r\n  <div class=\"app-main__outer\">\r\n    <div class=\"app-main__inner\">\r\n      <div [@architectUIAnimation]=\"o.isActivated ? o.activatedRoute : ''\">\r\n        <router-outlet #o=\"outlet\"></router-outlet>\r\n      </div>\r\n    </div>\r\n<!--    <app-footer></app-footer>-->\r\n  </div>\r\n  <div class=\"sidebar-menu-overlay\" (click)=\"toggleSidebarMobile()\"></div>\r\n</div>\r\n<ngx-loading-bar [color]=\"'var(--primary)'\"></ngx-loading-bar>\r\n<notifier-container></notifier-container>\r\n"
+module.exports = "<div [ngClass]=\"{\n'closed-sidebar' : globals.toggleSidebar,\n'closed-sidebar-md' : globals.toggleSidebarMobile,\n'closed-sidebar-open': globals.sidebarHover || globals.toggleSidebarMobile,\n'header-menu-open' : globals.toggleHeaderMobile,\n'fixed-footer' : globals.toggleFixedFooter\n}\" [class]=\"'app-container app-theme-white'\">\n  <app-header></app-header>\n  <app-sidebar></app-sidebar>\n  <div class=\"app-main__outer\">\n    <div class=\"app-main__inner\">\n      <div [@architectUIAnimation]=\"o.isActivated ? o.activatedRoute : ''\">\n        <router-outlet #o=\"outlet\"></router-outlet>\n      </div>\n    </div>\n<!--    <app-footer></app-footer>-->\n  </div>\n  <div class=\"sidebar-menu-overlay\" (click)=\"toggleSidebarMobile()\"></div>\n</div>\n<ngx-loading-bar [color]=\"'var(--primary)'\"></ngx-loading-bar>\n<notifier-container></notifier-container>\n"
 
 /***/ }),
 
@@ -793,7 +793,7 @@ var BaseLayoutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [@architectUIAnimation]=\"o.isActivated ? o.activatedRoute : ''\">\r\n  <router-outlet #o=\"outlet\"></router-outlet>\r\n</div>\r\n<ngx-loading-bar [color]=\"'var(--primary)'\"></ngx-loading-bar>\r\n"
+module.exports = "<div [@architectUIAnimation]=\"o.isActivated ? o.activatedRoute : ''\">\n  <router-outlet #o=\"outlet\"></router-outlet>\n</div>\n<ngx-loading-bar [color]=\"'var(--primary)'\"></ngx-loading-bar>\n"
 
 /***/ }),
 
@@ -859,7 +859,7 @@ var PagesLayoutComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-card pb-3 mb-2 card\">\n  <div class=\"card-body\">\n    <p>\n      {{ card.text }}\n    </p>\n    <p class=\"mb-3\"><b>Location: </b>{{ card.location }}</p>\n    <p class=\"mb-3\"><b>Phone: </b>{{ card.phone }}</p>\n    <p>\n      <audio controls>\n        <source src=\"https://api.superwater.tech/storage/{{ card.voice}}\" type=\"audio/flac\">\n      </audio>\n    </p>\n    <div class=\"col-lg-6 widget-content p-0 mb-3\">\n      <div class=\"widget-content p-0\">\n        <div class=\"widget-content-outer\">\n          <div class=\"widget-content-wrapper\">\n            <div class=\"widget-content-left pr-2\">\n              <div class=\"widget-numbers fsize-1\">{{ card.text_confidence }}</div>\n            </div>\n            <div class=\"widget-content-right w-100\">\n              <div class=\"progress-bar-xs progress\">\n                <div class=\"progress-bar\"\n                     [ngClass]=\"{\n                        'bg-danger' : card.text_confidence_value > 65,\n                        'bg-warning' : card.text_confidence_value > 40 && card.text_confidence_value <= 65,\n                        'bg-success' : card.text_confidence_value <= 40\n                       }\"\n                     role=\"progressbar\" aria-valuenow=\"71\" aria-valuemin=\"0\"\n                     aria-valuemax=\"100\" [style.width]=\"card.text_confidence\"></div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"mb-3\">\n      <p *ngIf=\"card.categories.length == 0\">\n        Теги не найдены\n      </p>\n      <div *ngFor=\"let tag of card.categories\" class=\"badge mr-1 fsize-1 badge-pill badge-info\">{{ tag }}</div>\n    </div>\n    <google-map  height=\"300px\" width=\"100%\"  [zoom]=\"5\" [center]=\"card.latlng[0]\">\n      <map-marker *ngFor=\"let item of card.latlng\" [position]=\"item\"></map-marker>\n    </google-map>\n  </div>\n</div>\n<div class=\"col-lg-12 main-card pb-3 card\">\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Ответить</h5>\n    <form novalidate=\"\" class=\"ng-untouched ng-pristine ng-valid\">\n      <div class=\"position-relative form-group\">\n        <div class=\"position-relative form-group\">\n            <textarea\n                [disabled]=\"card.answer\"\n                class=\"form-control\"\n                id=\"exampleText\"\n                [(ngModel)]=\"answer\"\n                name=\"text\"></textarea>\n        </div>\n      </div>\n      <button class=\"mt-1 btn btn-primary\"\n              [disabled]=\"card.answer\"\n              (click)=\"sendAnswer(answer)\">Отправить</button>\n    </form>\n  </div>\n</div>\n"
+module.exports = "<div class=\"main-card pb-3 mb-2 card\">\n  <div class=\"card-body\">\n    <p>\n      {{ card.text }}\n    </p>\n    <p class=\"mb-3\"><b>Location: </b>{{ card.location }}</p>\n    <p class=\"mb-3\"><b>Phone: </b>{{ card.phone }}</p>\n    <p>\n      <a href=\"https://www.problem-support.com/storage/{{ card.voice}}\">Ссылка на скачивание разговора</a>\n    </p>\n    <div class=\"col-lg-6 widget-content p-0 mb-3\">\n      <div class=\"widget-content p-0\">\n        <div class=\"widget-content-outer\">\n          <div class=\"widget-content-wrapper\">\n            <div class=\"widget-content-left pr-2\">\n              <div class=\"widget-numbers fsize-1\">{{ card.text_confidence }}</div>\n            </div>\n            <div class=\"widget-content-right w-100\">\n              <div class=\"progress-bar-xs progress\">\n                <div class=\"progress-bar\"\n                     [ngClass]=\"{\n                        'bg-danger' : card.text_confidence_value > 65,\n                        'bg-warning' : card.text_confidence_value > 40 && card.text_confidence_value <= 65,\n                        'bg-success' : card.text_confidence_value <= 40\n                       }\"\n                     role=\"progressbar\" aria-valuenow=\"71\" aria-valuemin=\"0\"\n                     aria-valuemax=\"100\" [style.width]=\"card.text_confidence\"></div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"mb-3\">\n      <p *ngIf=\"card.categories.length == 0\">\n        Теги не найдены\n      </p>\n      <div *ngFor=\"let tag of card.categories\" class=\"badge mr-1 fsize-1 badge-pill badge-info\">{{ tag }}</div>\n    </div>\n    <google-map  height=\"300px\" width=\"100%\"  [zoom]=\"5\" [center]=\"card.latlng[0]\">\n      <map-marker *ngFor=\"let item of card.latlng\" [position]=\"item\"></map-marker>\n    </google-map>\n  </div>\n</div>\n<div class=\"col-lg-12 main-card pb-3 card\">\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">Ответить</h5>\n    <form novalidate=\"\" class=\"ng-untouched ng-pristine ng-valid\">\n      <div class=\"position-relative form-group\">\n        <div class=\"position-relative form-group\">\n            <textarea\n                [disabled]=\"card.answer\"\n                class=\"form-control\"\n                id=\"exampleText\"\n                [(ngModel)]=\"answer\"\n                name=\"text\"></textarea>\n        </div>\n      </div>\n      <button class=\"mt-1 btn btn-primary\"\n              [disabled]=\"card.answer\"\n              (click)=\"sendAnswer(answer)\">Отправить</button>\n    </form>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1064,7 +1064,7 @@ var InfoCardsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"h-100 bg-animation\">\r\n  <div class=\"d-flex h-100 justify-content-center align-items-center\">\r\n    <div class=\"mx-auto app-login-box col-md-8\">\r\n      <div class=\"modal-dialog w-100 mx-auto\">\r\n        <div class=\"modal-content\">\r\n          <div class=\"modal-body\">\r\n            <div class=\"h5 modal-title text-center\">\r\n              <h4 class=\"mt-2\">\r\n                <div>Вход</div>\r\n                <span>в административную панель</span></h4>\r\n            </div>\r\n            <form ngForm #authForm=\"ngForm\">\r\n              <div class=\"form-group\">\r\n                <div><input\r\n                    required\r\n                    name=\"email\"\r\n                    #userEmail=\"ngModel\"\r\n                    [(ngModel)]=\"user.email\"\r\n                    type=\"email\" placeholder=\"Введите email...\"\r\n                    aria-required=\"true\" class=\"form-control\">\r\n                </div>\r\n              </div>\r\n              <div role=\"group\" class=\"form-group\">\r\n                <div><input\r\n                    required\r\n                    name=\"password\"\r\n                    #userEmail=\"ngModel\"\r\n                    [(ngModel)]=\"user.password\"\r\n                    type=\"password\" placeholder=\"Введите password...\"\r\n                    aria-required=\"true\" class=\"form-control\"></div>\r\n              </div>\r\n            </form>\r\n            <div class=\"divider\"></div>\r\n          </div>\r\n          <div class=\"modal-footer clearfix\">\r\n            <div class=\"float-right\">\r\n              <button type=\"button\"\r\n                      (click)=\"auth()\"\r\n                      [disabled]=\"user.email.length === 0 || user.password.length === 0\"\r\n                      class=\"btn btn-primary btn-lg\">\r\n                Вход\r\n              </button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"h-100 bg-animation\">\n  <div class=\"d-flex h-100 justify-content-center align-items-center\">\n    <div class=\"mx-auto app-login-box col-md-8\">\n      <div class=\"modal-dialog w-100 mx-auto\">\n        <div class=\"modal-content\">\n          <div class=\"modal-body\">\n            <div class=\"h5 modal-title text-center\">\n              <h4 class=\"mt-2\">\n                <div>Вход</div>\n                <span>в административную панель</span></h4>\n            </div>\n            <form ngForm #authForm=\"ngForm\">\n              <div class=\"form-group\">\n                <div><input\n                    required\n                    name=\"email\"\n                    #userEmail=\"ngModel\"\n                    [(ngModel)]=\"user.email\"\n                    type=\"email\" placeholder=\"Введите email...\"\n                    aria-required=\"true\" class=\"form-control\">\n                </div>\n              </div>\n              <div role=\"group\" class=\"form-group\">\n                <div><input\n                    required\n                    name=\"password\"\n                    #userEmail=\"ngModel\"\n                    [(ngModel)]=\"user.password\"\n                    type=\"password\" placeholder=\"Введите password...\"\n                    aria-required=\"true\" class=\"form-control\"></div>\n              </div>\n            </form>\n            <div class=\"divider\"></div>\n          </div>\n          <div class=\"modal-footer clearfix\">\n            <div class=\"float-right\">\n              <button type=\"button\"\n                      (click)=\"auth()\"\n                      [disabled]=\"user.email.length === 0 || user.password.length === 0\"\n                      class=\"btn btn-primary btn-lg\">\n                Вход\n              </button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1138,43 +1138,57 @@ var LoginBoxedComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/MainPages/record/record-mic.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/MainPages/record/record-mic.component.html ***!
-  \************************************************************/
+/***/ "./src/app/MainPages/setting/setting.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/MainPages/setting/setting.component.html ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"h-100 bg-animation\">\n  <div class=\"d-flex h-100 justify-content-center align-items-center\">\n    <div class=\"mx-auto app-login-box col-md-8\">\n      <div class=\"modal-dialog w-100 mx-auto\">\n        <div class=\"modal-content\">\n          <div class=\"modal-body\">\n            <div class=\"h5 modal-title text-center\">\n              <h4 class=\"mt-2\">\n                <div>Загрузка примера аудиофайла</div>\n              </h4>\n            </div>\n            <form ngForm #testForm=\"ngForm\">\n              <div class=\"form-group\">\n                <div class=\"container\">\n                  <input type=\"file\" name=\"photo\" ng2FileSelect [uploader]=\"uploader\" />\n\n                </div>\n              </div>\n            </form>\n            <div class=\"divider\"></div>\n          </div>\n          <div class=\"modal-footer clearfix\">\n            <div class=\"float-right\">\n              <button type=\"button\" class=\"btn btn-primary btn-lg\"\n                      (click)=\"uploader.uploadAll()\"\n                      [disabled]=\"!uploader.getNotUploadedItems().length\" >\n                Загрузить\n              </button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"main-card pb-3 mb-2 card\">\n  <div class=\"card-body\">\n\n    <div class=\"position-relative form-group\">\n      <label for=\"email\">Email для отправки уведомлений</label>\n      <input class=\"form-control\"\n             id=\"email\"\n             name=\"aemail\"\n             accept=\"audio/mpeg\"\n             [(ngModel)]=\"email\"\n             placeholder=\"Введите Email\"\n             type=\"email\">\n      <br/>\n      <button type=\"button\" class=\"btn btn-primary btn-lg\"\n              (click)=\"save()\"\n              [disabled]=\"loading\">\n        Сохранить\n      </button>\n\n    </div>\n\n    <div class=\"position-relative form-group\">\n      <label for=\"file\">Mp3 файл приветствия</label>\n      <br/>\n      <input id=\"file\"\n             name=\"file\"\n             placeholder=\"Выберите File\"\n             type=\"file\"\n             ng2FileSelect [uploader]=\"uploader\"/>\n      <br/>\n      <br/>\n      <button type=\"button\" class=\"btn btn-primary btn-lg\"\n              (click)=\"uploader.uploadAll()\"\n              [disabled]=\"!uploader.getNotUploadedItems().length\">\n        Загрузить\n      </button>\n\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ "./src/app/MainPages/record/record-mic.component.ts":
-/*!**********************************************************!*\
-  !*** ./src/app/MainPages/record/record-mic.component.ts ***!
-  \**********************************************************/
-/*! exports provided: RecordMicComponent */
+/***/ "./src/app/MainPages/setting/setting.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/MainPages/setting/setting.component.ts ***!
+  \********************************************************/
+/*! exports provided: SettingComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecordMicComponent", function() { return RecordMicComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SettingComponent", function() { return SettingComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var ng2_file_upload__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ng2-file-upload */ "./node_modules/ng2-file-upload/fesm5/ng2-file-upload.js");
-/* harmony import */ var _configs_UrlConfig__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../configs/UrlConfig */ "./src/configs/UrlConfig.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var ng2_file_upload__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ng2-file-upload */ "./node_modules/ng2-file-upload/fesm5/ng2-file-upload.js");
+/* harmony import */ var _configs_UrlConfig__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../configs/UrlConfig */ "./src/configs/UrlConfig.ts");
+/* harmony import */ var ngx_cookie_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-cookie-service */ "./node_modules/ngx-cookie-service/ngx-cookie-service.es5.js");
 
 
 
 
-var RecordMicComponent = /** @class */ (function () {
-    function RecordMicComponent() {
-        this.uploader = new ng2_file_upload__WEBPACK_IMPORTED_MODULE_2__["FileUploader"]({
-            url: _configs_UrlConfig__WEBPACK_IMPORTED_MODULE_3__["UrlConfig"].API + "/audio",
-            itemAlias: 'audio'
+
+
+var SettingComponent = /** @class */ (function () {
+    function SettingComponent(storage, http) {
+        var _this = this;
+        this.storage = storage;
+        this.http = http;
+        this.email = '';
+        this.loading = false;
+        this.http.get(_configs_UrlConfig__WEBPACK_IMPORTED_MODULE_4__["UrlConfig"].API + "/setting").toPromise().then(function (data) {
+            _this.email = data.email;
+        });
+        var token = this.storage.get('auth');
+        this.uploader = new ng2_file_upload__WEBPACK_IMPORTED_MODULE_3__["FileUploader"]({
+            url: _configs_UrlConfig__WEBPACK_IMPORTED_MODULE_4__["UrlConfig"].API + "/setting",
+            itemAlias: 'file',
+            authToken: "Bearer " + token
         });
     }
-    RecordMicComponent.prototype.ngOnInit = function () {
+    SettingComponent.prototype.ngOnInit = function () {
         this.uploader.onAfterAddingFile = function (file) {
             file.withCredentials = false;
         };
@@ -1186,13 +1200,30 @@ var RecordMicComponent = /** @class */ (function () {
             alert('Файл успешно загружен');
         };
     };
-    RecordMicComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-record-mic',
-            template: __webpack_require__(/*! ./record-mic.component.html */ "./src/app/MainPages/record/record-mic.component.html")
+    SettingComponent.prototype.save = function () {
+        var _this = this;
+        this.loading = true;
+        this.http.post(_configs_UrlConfig__WEBPACK_IMPORTED_MODULE_4__["UrlConfig"].API + "/setting", {
+            email: this.email
+        }).toPromise()
+            .then(function () {
+            alert('Email успшно установлен');
+            _this.loading = false;
         })
-    ], RecordMicComponent);
-    return RecordMicComponent;
+            .catch(function () {
+            alert('Произошла ошибка');
+            _this.loading = false;
+        });
+    };
+    SettingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-setting',
+            template: __webpack_require__(/*! ./setting.component.html */ "./src/app/MainPages/setting/setting.component.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [ngx_cookie_service__WEBPACK_IMPORTED_MODULE_5__["CookieService"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], SettingComponent);
+    return SettingComponent;
 }());
 
 
@@ -1387,7 +1418,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./MainPages/infoCards/info-cards.component */ "./src/app/MainPages/infoCards/info-cards.component.ts");
 /* harmony import */ var _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MainPages/infoCard/info-card.component */ "./src/app/MainPages/infoCard/info-card.component.ts");
 /* harmony import */ var _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./MainPages/login/login-boxed.component */ "./src/app/MainPages/login/login-boxed.component.ts");
-/* harmony import */ var _MainPages_record_record_mic_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./MainPages/record/record-mic.component */ "./src/app/MainPages/record/record-mic.component.ts");
+/* harmony import */ var _MainPages_setting_setting_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./MainPages/setting/setting.component */ "./src/app/MainPages/setting/setting.component.ts");
 
 
 
@@ -1401,11 +1432,11 @@ var routes = [
         path: 'card',
         component: _Layout_base_layout_base_layout_component__WEBPACK_IMPORTED_MODULE_3__["BaseLayoutComponent"],
         children: [
+            { path: 'settings', component: _MainPages_setting_setting_component__WEBPACK_IMPORTED_MODULE_7__["SettingComponent"] },
             { path: '', component: _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_4__["InfoCardsComponent"] },
             { path: ':id', component: _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_5__["InfoCardComponent"] },
         ]
     },
-    { path: 'rec', component: _MainPages_record_record_mic_component__WEBPACK_IMPORTED_MODULE_7__["RecordMicComponent"] },
     { path: '', component: _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_6__["LoginBoxedComponent"] },
     { path: '**', redirectTo: 'card' }
 ];
@@ -1435,7 +1466,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\r\n"
+module.exports = "<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1514,7 +1545,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./MainPages/infoCards/info-cards.component */ "./src/app/MainPages/infoCards/info-cards.component.ts");
 /* harmony import */ var _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./MainPages/infoCard/info-card.component */ "./src/app/MainPages/infoCard/info-card.component.ts");
 /* harmony import */ var _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./MainPages/login/login-boxed.component */ "./src/app/MainPages/login/login-boxed.component.ts");
-/* harmony import */ var _MainPages_record_record_mic_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./MainPages/record/record-mic.component */ "./src/app/MainPages/record/record-mic.component.ts");
+/* harmony import */ var _MainPages_setting_setting_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./MainPages/setting/setting.component */ "./src/app/MainPages/setting/setting.component.ts");
 /* harmony import */ var _Utils_Interceptors_RequestProcessInterceptor__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./Utils/Interceptors/RequestProcessInterceptor */ "./src/app/Utils/Interceptors/RequestProcessInterceptor.ts");
 
 
@@ -1587,7 +1618,7 @@ var AppModule = /** @class */ (function () {
                 _MainPages_infoCards_info_cards_component__WEBPACK_IMPORTED_MODULE_30__["InfoCardsComponent"],
                 _MainPages_infoCard_info_card_component__WEBPACK_IMPORTED_MODULE_31__["InfoCardComponent"],
                 _MainPages_login_login_boxed_component__WEBPACK_IMPORTED_MODULE_32__["LoginBoxedComponent"],
-                _MainPages_record_record_mic_component__WEBPACK_IMPORTED_MODULE_33__["RecordMicComponent"]
+                _MainPages_setting_setting_component__WEBPACK_IMPORTED_MODULE_33__["SettingComponent"]
             ],
             imports: [
                 _angular_google_maps__WEBPACK_IMPORTED_MODULE_13__["GoogleMapsModule"],
@@ -1761,7 +1792,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/zoohack/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /var/www/frontend/src/main.ts */"./src/main.ts");
 
 
 /***/ })
