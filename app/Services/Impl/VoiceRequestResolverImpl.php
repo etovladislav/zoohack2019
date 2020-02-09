@@ -35,12 +35,12 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
     /**
      * VoiceRequestResolverImpl constructor.
      *
-     * @param GoogleTranslateService $translator
-     * @param GoogleSpeechKitService $speechToText
-     * @param GoogleNeuralService $textAnalyser
-     * @param RequestsRepository $repository
+     * @param GoogleTranslateService      $translator
+     * @param GoogleSpeechKitService      $speechToText
+     * @param GoogleNeuralService         $textAnalyser
+     * @param RequestsRepository          $repository
      * @param RegionByPhoneNumberDetector $regionDetector
-     * @param TextCategoryDetector $textCategoryDetector
+     * @param TextCategoryDetector        $textCategoryDetector
      */
     public function __construct(
         GoogleTranslateService $translator,
@@ -49,13 +49,12 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
         RequestsRepository $repository,
         RegionByPhoneNumberDetector $regionDetector,
         TextCategoryDetector $textCategoryDetector
-    )
-    {
-        $this->translator = $translator;
-        $this->speechToText = $speechToText;
-        $this->textAnalyser = $textAnalyser;
-        $this->repository = $repository;
-        $this->regionDetector = $regionDetector;
+    ) {
+        $this->translator           = $translator;
+        $this->speechToText         = $speechToText;
+        $this->textAnalyser         = $textAnalyser;
+        $this->repository           = $repository;
+        $this->regionDetector       = $regionDetector;
         $this->textCategoryDetector = $textCategoryDetector;
     }
 
@@ -64,13 +63,15 @@ final class VoiceRequestResolverImpl implements VoiceRequestResolver
         list($flacFile, $mp3File) = FileUtil::saveFromUrl($requestAudioRecord);
         $storagePath = storage_path('app/public');
         exec("ffmpeg -i $storagePath/$flacFile $storagePath/$mp3File");
-        $text = $this->speechToText->speechToText($storagePath . '/' . $flacFile, null);
-        $enText = $this->translator->translate($text->getTranscription(), 'en');
-        $analysedText = $this->textAnalyser->analyseText($enText);
-        $categories = $analysedText->getCategories();
-        $region = $this->regionDetector->execute($phone);
+        $text               = $this->speechToText->speechToText($storagePath . '/' . $flacFile, null);
+        $enText             = $this->translator->translate($text->getTranscription(), 'en');
+        $analysedText       = $this->textAnalyser->analyseText(
+            preg_replace('/[\x{0410}-\x{042F}]+.*[\x{0410}-\x{042F}]+/iu', '', $enText)
+        );
+        $categories         = $analysedText->getCategories();
+        $region             = $this->regionDetector->execute($phone);
         $internalCategories = $this->textCategoryDetector->execute($enText);
-        $textLocation = $analysedText->getEntites();
+        $textLocation       = $analysedText->getEntites();
         foreach ($internalCategories as $item) {
             $categories['categories'][] = ['name' => $item, 'confidence' => 0.8];
         }
