@@ -37,9 +37,6 @@ final class IndexController extends Controller
     ) {
         $model = SettingModel::query()->first();
         if ($request->hasFile('file')) {
-           if (file_exists('/var/www/backend/storage/app/public/file.mp3')) {
-             unlink('/var/www/backend/storage/app/public/file.mp3');
-           }
             $request->file('file')->storePubliclyAs('public', 'file.mp3');
 
         }
