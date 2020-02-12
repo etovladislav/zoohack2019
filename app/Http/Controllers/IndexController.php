@@ -37,7 +37,7 @@ final class IndexController extends Controller
     ) {
         $model = SettingModel::query()->first();
         if ($request->hasFile('file')) {
-            $request->file('file')->storePubliclyAs('public', 'file.mp3');
+            $request->file('file')->storePubliclyAs('public', 'file2.mp3');
 
         }
         if ($model === null) {
